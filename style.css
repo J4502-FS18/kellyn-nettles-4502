@@ -1,0 +1,80 @@
+p {
+	color: #31546B;
+	font-family: 'Playfair Display', "Times New Roman", serif;
+	font-weight: lighter;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: center;
+}
+
+h1 {
+	font-family:'Sansita', Arial, sans-serif;
+	text-align: center;
+	font-weight: bold;
+	font-size: 70px;
+	line-height: 30px;
+	color: #2684F6
+}
+
+h3 {
+	font-family: 'Sansita', Arial, sans-serif;
+	font-weight:bold;
+	font-style: oblique;
+	font-size:16px;
+	line-height: 18px;
+	color: #2684F6
+}
+
+#container {
+	width: 95%;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #F6C265
+}
+
+#nav {
+	padding: 0;
+	list-style-type: none;
+}
+
+#nav li {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #ccc;
+}
+
+#nav a:link, #nav a:visited {
+	display: block;
+	color: #fff;
+	background-color: #6CB7EB;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	padding: 4px;
+	font-family:'Rubik Mono One', Arial, sans-serif;
+}
+
+#nav a:hover, #nav a:active {
+	background-color: #FF8287;
+}
+
+.caption {
+	color: black;
+	font-family: Georgia, "Times New Roman", serif;
+	font-style: italic;
+	font-size: 0.8em;
+	margin-top: 0;
+	text-align: right;
+}
+
+#footer {
+	color: #10466B;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 0.8em;
+	border-top: 1px solid black;
+}
+
+img {
+	border: none;
+}
