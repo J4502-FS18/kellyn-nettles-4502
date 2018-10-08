@@ -12,7 +12,7 @@ h1 {
 	text-align: center;
 	font-weight: bold;
 	font-size: 70px;
-	line-height: 30px;
+	line-height: 70px;
 	color: #2684F6
 }
 
@@ -25,12 +25,61 @@ h3 {
 	color: #2684F6
 }
 
+#nav{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	flex-flow: row;
+	height: 300px;
+	height: 50vh;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding: 0;
+	list-style-type: none;
+	padding: 20;
+	background: #fff;
+  	border-radius: 5px;
+	margin: 45px auto;
+  	box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+	border-bottom: 1px solid #ccc
+}
+
+.item {
+	color: #fff;
+	background-color: #6CB7EB;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	padding: 4px;
+	font-family: 'Rubik Mono One', Arial, sans-serif;
+}
+
+@media (min-width: 600px) {
+	.container {
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+@media (min-width: 800px) {
+
+	.item-1 {
+		margin-right: auto;
+	}
+}
+
 #container {
 	width: 95%;
 	margin: 0 auto;
 	text-align: center;
 	background-color: #F6C265
 }
+
 
 #nav {
 	padding: 0;
