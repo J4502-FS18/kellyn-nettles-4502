@@ -1,10 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    line-height: 1.45em;
+}
+
+#container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+
 p {
 	color: #31546B;
 	font-family: 'Playfair Display', "Times New Roman", serif;
 	font-weight: lighter;
 	font-size: 18px;
 	line-height: 22px;
-	text-align: center;
+	text-align: left;
+	margin-bottom: 0.8em;
+}
+
+aside p {
+	font-size: 0.8em;
+	line-height: 1.2em;
 }
 
 h1 {
@@ -16,12 +39,21 @@ h1 {
 	color: #2684F6
 }
 
+h2 {
+	font-family: 'Sansita',Arial, sans-serif;
+	font-weight: bold;
+	font-style: oblique;
+	font-size: 30px;
+	line-height: 32px;
+	color: #2684F6
+}
+
 h3 {
 	font-family: 'Sansita', Arial, sans-serif;
 	font-weight:bold;
 	font-style: oblique;
-	font-size:16px;
-	line-height: 18px;
+	font-size:20px;
+	line-height: 22px;
 	color: #2684F6
 }
 
@@ -40,7 +72,7 @@ h3 {
 	flex-direction: row;
 	padding: 0;
 	list-style-type: none;
-	padding: 20;
+	padding: 20px;
 	background: #fff;
   	border-radius: 5px;
 	margin: 45px auto;
@@ -73,7 +105,125 @@ h3 {
 	}
 }
 
-#container {
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: column;
+}
+/* Makes the nav items flexible items, so now they'll be in columns and make things horizontal automatically without needing display: flex every time */
+.authorbox img {
+  display: none;
+}
+/* display:none Gets rid of things that you don't want to be shown on the page and pulls up the text instead of keeping the box */
+.pullquote {
+  display: none;
+}
+
+article {
+  margin-bottom: 0.7em;
+  border-bottom: 1px solid #ccc;
+}
+
+article:last-of-type {
+  border-bottom: none;
+}
+/* last-of-type applies said style to the last item you have selected */
+@media screen and (min-width: 450px) {
+  nav ul {
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+}
+@media screen and (min-width: 600px) {
+  #container {
+    width: 80%
+  }
+  .authorbox img {
+    display: block;
+    width: 100%;
+    margin-top: 0.5em;
+  }
+
+  .authorbox {
+    width: 25%;
+    max-width: 200px;
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .item1 {
+    margin-right: auto;
+  }
+  nav ul li {
+    margin: 5px;
+  }
+
+  .pullquote {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  article {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas:
+    "a b b"
+    "c c e"
+    ". d d";
+  }
+
+  .authorbox {
+    width: 100%;
+    grid-area: a;
+  }
+
+  .section1 {
+    grid-area: b;
+  }
+
+  .image {
+    grid-area: c;
+  }
+
+  .section2 {
+    grid-area: d;
+  }
+
+  .pullquote {
+    grid-area: e;
+    margin-top: 0;
+  }
+  .section1 p:first-of-type, .section2 p:first-of-type {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  article {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas:
+    "a b b e"
+    "c c c ."
+    ". d d .";
+  }
+  #container {
+    max-width: 1300px;
+  }
+}
+
+
+/* #container {
 	width: 95%;
 	margin: 0 auto;
 	text-align: center;
@@ -90,9 +240,9 @@ h3 {
 	margin: 0;
 	padding: 0;
 	border-bottom: 1px solid #ccc;
-}
+} */
 
-#nav a:link, #nav a:visited {
+/* #nav a:link, #nav a:visited {
 	display: block;
 	color: #fff;
 	background-color: #6CB7EB;
@@ -102,28 +252,104 @@ h3 {
 	text-decoration: none;
 	padding: 4px;
 	font-family:'Rubik Mono One', Arial, sans-serif;
-}
+} */
 
-#nav a:hover, #nav a:active {
+/* #nav a:hover, #nav a:active {
 	background-color: #FF8287;
-}
+} */
 
-.caption {
+/* .caption {
 	color: black;
 	font-family: Georgia, "Times New Roman", serif;
 	font-style: italic;
 	font-size: 0.8em;
 	margin-top: 0;
 	text-align: right;
-}
+} */
 
-#footer {
+/* #footer {
 	color: #10466B;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 0.8em;
 	border-top: 1px solid black;
-}
+} */
 
 img {
 	border: none;
+}
+
+.caption {
+    font-size: 0.7em;
+    text-align: right;
+    margin-top: 0;
+    font-style: italic;
+}
+
+.byline {
+    font-family: "Sansita", Helvetica, Arial, sans-serif;
+    font-size: 0.7em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    line-height: normal;
+}
+
+.dateline {
+    font-family: "Sansita", Helvetica, Arial, sans-serif;
+    font-size: 0.7em;
+    color: #aaa;
+    margin: 0;
+    line-height: normal;
+}
+
+.pullquote {
+  font-family: "Sansita", Helvetica, Arial, sans-serif;
+  font-size: 1.25em;
+  font-style: italic;
+  line-height: 1.25;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    font-family: "Sansita", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+.title {
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    border-radius: 5%;
+    margin-left: 0.5em;
+    height: 3em;
+}
+
+
+footer {
+    border-top: 1px solid #ccc;
+}
+
+footer p {
+    font-size: 0.8em;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    color: #FF8287;
 }
